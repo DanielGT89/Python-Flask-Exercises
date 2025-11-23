@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .mensagem {
+            margin: 20px auto;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .acerto {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .erro {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #337ab7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #286090;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultado</h1>
+    
+    <div class="mensagem {% if acertou %}acerto{% else %}erro{% endif %}">
+        {{ mensagem }}
+    </div>
+    
+    {% if acertou %}
+        <a href="/">Jogar novamente</a>
+    {% else %}
+        <a href="/">Tentar novamente</a>
+    {% endif %}
+</body>
+</html>

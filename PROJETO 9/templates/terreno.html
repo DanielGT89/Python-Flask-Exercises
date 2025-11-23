@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 9 - Cálculo de Volume de Concreto</title>
+</head>
+<body>
+    <center>
+        <h2>Calculadora de Volume de Concreto</h2>
+        <form action="/calcular" method="POST">
+            Largura do terreno (m): <input type="number" name="larguraterreno" step="0.01" required><br>
+            Profundidade do terreno (m): <input type="number" name="profundidadeterreno" step="0.01" required><br>
+            Largura da calçada (mín. 1.2m): <input type="number" name="larguracalcada" step="0.01" required><br>
+            Altura do concreto (mín. 6cm): <input type="number" name="alturaconcreto" step="0.01" required><br>
+            <input type="submit" value="Calcular">
+        </form>
+    </center>
+</body>
+</html>

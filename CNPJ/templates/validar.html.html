@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Validador de CNPJ</title>
+</head>
+<body>
+    <h1>Validador de CNPJs</h1>
+
+    <form method="POST" action="\validar">
+        <label for="cnpj">Digite o CNPJ:</label>
+        <input type="text" name="cnpj" required>
+        <input type="submit" value="Validar">
+    </form>
+
+    {% if resultado %}
+        <p><strong>{{ resultado }}</strong></p>
+    {% endif %}
+
+    <h2>CNPJs validados:</h2>
+    <ul>
+        {% for cnpj in lista_cnpjs %}
+            <li>{{ cnpj }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
